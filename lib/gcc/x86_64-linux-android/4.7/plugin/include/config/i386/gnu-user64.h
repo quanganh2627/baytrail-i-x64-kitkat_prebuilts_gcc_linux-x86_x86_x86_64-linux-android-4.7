@@ -40,7 +40,11 @@ see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
 #undef CC1_SPEC
 #define CC1_SPEC \
   LINUX_OR_ANDROID_CC (LINUX_TARGET_CC1_SPEC, \
-		       LINUX_TARGET_CC1_SPEC " " ANDROID_CC1_SPEC("-fPIC"))
+                       LINUX_TARGET_CC1_SPEC \
+                       " -mstackrealign -mssse3" \
+                       " -fno-short-enums" \
+                       " " \
+                       ANDROID_CC1_SPEC("-fPIC"))
 
 /* The svr4 ABI for the i386 says that records and unions are returned
    in memory.  In the 64bit compilation we will turn this flag off in

@@ -32,6 +32,7 @@
 # include "config/i386/gnu-user64.h"
 # include "config/linux.h"
 # include "config/i386/linux64.h"
+# include "config/i386/ssemath.h"
 # include "config/initfini-array.h"
 #endif
 #if defined IN_GCC && !defined GENERATOR_FILE && !defined USED_FOR_TARGET
