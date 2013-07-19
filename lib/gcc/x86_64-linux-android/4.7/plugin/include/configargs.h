@@ -1,7 +1,0 @@
-/* Generated automatically. */
-static const char configuration_arguments[] = "/users/pvchupin/android/toolchain/gcc/gcc-4.7/configure --prefix=/tmp/ndk-pvchupin/build/host-gcc/x86_64-linux-gnu/temp-x86_64-4.7 --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-android --with-sysroot=/tmp/ndk-pvchupin/build/host-gcc/x86_64-linux-gnu/temp-x86_64-4.7/sysroot --with-gmp=/tmp/ndk-pvchupin/build/host-gcc/x86_64-linux-gnu/temp-prereqs --with-mpfr=/tmp/ndk-pvchupin/build/host-gcc/x86_64-linux-gnu/temp-prereqs --with-mpc=/tmp/ndk-pvchupin/build/host-gcc/x86_64-linux-gnu/temp-prereqs --with-gmp=/tmp/ndk-pvchupin/build/host-gcc/x86_64-linux-gnu/temp-prereqs --with-mpfr=/tmp/ndk-pvchupin/build/host-gcc/x86_64-linux-gnu/temp-prereqs --with-mpc=/tmp/ndk-pvchupin/build/host-gcc/x86_64-linux-gnu/temp-prereqs --with-gnu-as --with-gnu-ld --enable-threads --disable-libssp --disable-libmudflap --disable-libstdc__-v3 --disable-sjlj-exceptions --disable-tls --disable-libquadmath --disable-libitm --disable-bootstrap --enable-languages=c,c++ --disable-shared --disable-nls --disable-werror --enable-target-optspace --disable-libsanitizer --disable-libgomp --disable-libatomic --enable-initfini-array --with-arch=x86-64 --with-tune=atom --with-fpmath=sse --with-multilib-list=m32,m64,mx32";
-static const char thread_model[] = "posix";
-
-static const struct {
-  const char *name, *value;
-} configure_default_options[] = { { "cpu", "generic" }, { "arch", "x86-64" }, { "tune", "atom" } };
