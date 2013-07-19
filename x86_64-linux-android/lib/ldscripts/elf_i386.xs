@@ -35,7 +35,7 @@ SECTIONS
     }
   .init           :
   {
-    KEEP (*(.init))
+    KEEP (*(SORT_NONE(.init)))
   }
   .plt            : { *(.plt) *(.iplt) }
   .text           :
@@ -50,7 +50,7 @@ SECTIONS
   }
   .fini           :
   {
-    KEEP (*(.fini))
+    KEEP (*(SORT_NONE(.fini)))
   }
   PROVIDE (__etext = .);
   PROVIDE (_etext = .);
@@ -86,14 +86,16 @@ SECTIONS
   .init_array     :
   {
     KEEP (*crtbegin*.o(.init_array))
-    KEEP (*(SORT(.init_array.*)))
+    KEEP (*(SORT_BY_INIT_PRIORITY(.init_array.*) SORT_BY_INIT_PRIORITY(.ctors.*)))
     KEEP (*(.init_array))
+    KEEP (*(EXCLUDE_FILE (*crtbegin.o *crtbegin?.o *crtend.o *crtend?.o ) .ctors))
   }
   .fini_array     :
   {
     KEEP (*crtbegin*.o(.fini_array))
-    KEEP (*(SORT(.fini_array.*)))
+    KEEP (*(SORT_BY_INIT_PRIORITY(.fini_array.*) SORT_BY_INIT_PRIORITY(.dtors.*)))
     KEEP (*(.fini_array))
+    KEEP (*(EXCLUDE_FILE (*crtbegin.o *crtbegin?.o *crtend.o *crtend?.o ) .dtors))
   }
   .ctors          :
   {
